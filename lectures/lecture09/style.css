@@ -1,0 +1,17 @@
+.categories-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  padding: 10px;
+  border: 1px solid grey;
+  background-color: grey;
+  color: white;
+  width: 450px;
+  height: 90px;
+  margin-bottom: 10px;
+  text-align: center;
+}
