@@ -116,3 +116,56 @@ const hey = () => {
 }
 
 hey();
+
+function fullName (firstName, lastName) {
+  return `${firstName} ${lastName}`;
+}
+
+function callback(callback, firstArgument, secondArgument) {
+  return callback(firstArgument, secondArgument);
+}
+
+const fullNameWithCallback = callback(fullName, 'Daniel', 'Peshevski');
+console.log(fullNameWithCallback);
+
+function sum (a, b) {
+  return a + b;
+}
+
+const sumWithCallback = callback(sum, 4, 5);
+console.log(sumWithCallback);
+
+function address (resident, address) {
+  return `${resident} living at ${address}`;
+}
+
+const addressWithCallback = callback(address, 'Daniel Peshevski', 'Vladimir Kavaev 23/a, Karposh');
+console.log(addressWithCallback);
+
+const player = callback(
+  function (player, club) { 
+    return `${player} x ${club}`; 
+  },
+  'Ronaldo',
+  'Manchester United');
+
+  console.log(player);
+
+
+function grade (points) {
+}
+
+function gpa (grades) {
+}
+
+const promiseToBuyPlayStation = (gpa, target) => {
+  return new Promise((resolve, reject) => {
+    if (gpa > target) {
+      resolve('Congrats! You have successfully passed the challange!');
+    } else {
+      reject('Unfortunately.Try again next year!')
+    }
+  })
+}
+
+promiseToBuyPlayStation(9.1, 9).then(data => console.log(data)).catch(err => console.log(err));

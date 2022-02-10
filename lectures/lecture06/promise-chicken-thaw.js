@@ -1,4 +1,4 @@
-const thawChicken = minutes => {
+const thawChicken = seconds => {
   console.log('Chicken is being thawed...');
 
   return new Promise((resolve, reject) => {
@@ -10,7 +10,7 @@ const thawChicken = minutes => {
       } else {
         reject(new Error('Thawing is not finished yet. Please wait until it...'));
       }
-    }, minutes * 1000); // x = 1000 * x => x0000
+    }, seconds * 1000); // x = 1000 * x => x0000
   });
 }
 
